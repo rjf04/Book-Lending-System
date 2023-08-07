@@ -1,6 +1,5 @@
 # Book Borrowing Application
-This is a book rental application done using design thinking stratergy. In this application, you can list a book you wish to lend, submit an application to the person 
-lending the book for the book which you wish to borrow, etc. The lender can also delete the book which he listed after he lends the book.
+This is a book rental application done using design thinking stratergy. In this application, you can list a book you wish to lend incase you posses a book that you will not need. On the other hand, you can also submit an application to the person lending for the book which you wish to borrow the book. The lender can also delete the book which he listed after he lends the book in order to prevent discrepancies. Moreover, users can enter reviews of the books that they have used in order to provide a feedback to future lenders. A sentimental analysis is performed on the reviews in order to rate the book. Overall, this application can go a long way in helping students get access to books that they otherwise could not afford to buy.
 
 ## Working
 Home screen consists of two options. Lending and Borrowing
