@@ -1,0 +1,76 @@
+<%- include('partials/header'); -%>
+<style>
+    table, th, td {
+  border: 1px solid white;
+  border-collapse: collapse;
+}
+th, td {
+  background-color: #96D4D4;
+}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<br>
+<table class="table table-striped table-primary">
+  <thead>
+    <tr>
+      <th>Book</th>
+      <th>Rating</th>
+      <th>Stars</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%if (records.length >0){ %>
+    <% records.forEach(function(row){ %>
+    <tr>
+      <td><%= row._id %></td>
+      <td><%= row.total %></td>
+   
+      <% if (row.total >8) { %>
+        <td><span style="font-size:200%;color:yellow;">&starf;</span><span style="font-size:200%;color:yellow;">&starf;</span><span style="font-size:200%;color:yellow;">&starf;</span><span style="font-size:200%;color:yellow;">&starf;</span><span style="font-size:200%;color:yellow;">&starf;</span></td>
+      <% } else if (row.total>5) { %>
+        <td><span style="font-size:200%;color:yellow;">&starf;</span><span style="font-size:200%;color:yellow;">&starf;</span><span style="font-size:200%;color:yellow;">&starf;</span><span style="font-size:200%;color:yellow;">&starf;</span></td>
+      <% }else if (row.total>2) { %>
+        <td><span style="font-size:200%;color:yellow;">&starf;</span><span style="font-size:200%;color:yellow;">&starf;</span><span style="font-size:200%;color:yellow;">&starf;</span></td>
+      <% }else if (row.total>0) { %>
+        <td><span style="font-size:200%;color:yellow;">&starf;</span><span style="font-size:200%;color:yellow;">&starf;</span></td>
+      <% } else { %>
+        <td><span style="font-size:200%;color:yellow;">&starf;</span></td>
+      <% } %>
+    </tr>
+
+
+    <% })}else{ %>
+      <tr>
+          <td colspan="6">No Record Found</td>
+          
+        </tr>
+      <% } %>
+  </tbody>
+</table>
+<br>
+
+
+<canvas id="myChart" width="80" height="80"></canvas>
+<script>
+  
+  // const data =   {
+  //   labels: ['DC Pandey',' Concepts of Physics', 'Organic Chemistry-OPT'],
+  //   //help,
+  //   datasets: [{
+  //     label: 'Book V/S Ratings Graph',
+  //     data:  [1.666,5,3],
+  //     //help1,
+  //     fill: false,
+  //     borderColor: 'rgb(0,255,255 )',
+  //     tension: 0.1
+  //   }]
+  // };
+
+  // const ctx = document.getElementById('myChart').getContext('2d');
+  // const myChart = new Chart(ctx, {
+  //   type: 'bar',
+  //   data: data
+  // });
+
+</script>
+<%- include('partials/footer'); -%>
